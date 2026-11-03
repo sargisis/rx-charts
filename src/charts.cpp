@@ -396,7 +396,7 @@ std::string braille(std::uint8_t bits) {
 
 Element LineChart(const LineChartProps& p) {
     const int width = widthFor(p.width);
-    const int rows = p.height > 0 ? p.height : 10;
+    const int rows = p.rows > 0 ? p.rows : 10;
     const std::size_t n = pointCount(p.labels, p.series);
     double lo = minOf(p.series, INFINITY), hi = maxOf(p.series, -INFINITY);
     if (!std::isfinite(lo)) lo = 0, hi = 1;

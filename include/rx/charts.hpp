@@ -44,7 +44,8 @@ struct LineChartProps {
     std::vector<Series> series{};
     std::string title{};
     std::string unit{};
-    int height = 0;         // browser: px (default 240); terminal: rows (default 10)
+    int height = 0;         // browser: px (default 240)
+    int rows = 0;           // terminal: rows (default 10)
     int width = 0;          // terminal: cells (default: the window's width)
     bool dots = true;       // browser: a dot on every value
     std::string key{};

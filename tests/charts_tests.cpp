@@ -59,7 +59,7 @@ RX_TEST(a_line_is_drawn_in_braille_with_its_scale) {
     testing::Screen s(charts::line({.labels = {"Jan", "Feb", "Mar", "Apr"},
                                     .series = {{.name = "Visits", .values = {10, 40, 25, 80}}},
                                     .unit = "k",
-                                    .height = 6,
+                                    .rows = 6,
                                     .width = 40}),
                       60, 14);
     std::string text = s.text();

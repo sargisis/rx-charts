@@ -40,7 +40,7 @@ charts::bar({.labels = {"Q1", "Q2", "Q3"},
 // Lines through the values (braille in a terminal).
 charts::line({.labels = {"Jan", "Feb", "Mar", "Apr"},
               .series = {{.name = "Visits", .values = {10, 40, 25, 80}}},
-              .unit = "k", .height = 10})
+              .unit = "k", .rows = 8})
 
 // Shares of a whole: a pie or a ring in the browser, a split bar and a legend in a terminal.
 charts::pie({.labels = {"Rent", "Food", "Fun"}, .values = {1200, 450, 200}, .unit = "$", .donut = true})
@@ -51,7 +51,8 @@ charts::pie({.labels = {"Rent", "Food", "Fun"}, .values = {1200, 450, 200}, .uni
 | `labels` | one per value, under the bars or the line |
 | `series` | `{.name, .values, .color}`; `color` is a palette name (`blue`, `green`, `magenta`, `cyan`, `yellow`, `red`), in the browser any CSS color; empty: the next palette color |
 | `title`, `unit` | a caption; text after every value (`"k"`, `" %"`) |
-| `height` | browser: px (240); terminal (`line`): rows (10) |
+| `height` | browser: px (240) |
+| `rows` (`line`) | terminal: rows (10) |
 | `width` | terminal: cells (the window's width); the browser fills the box |
 | `dots` (`line`) | a dot on every value in the browser |
 | `donut` (`pie`) | a ring with the total in the middle |
